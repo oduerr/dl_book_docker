@@ -20,10 +20,10 @@ docker run -p 8080:8888 -p 6006:6006 -it oduerr/dl_book_docker
 open [http://localhost:8888/?token=tensorchiefs](http://localhost:8888/?token=tensorchiefs) or [http://192.168.99.100:8888/tree?token=tensorchiefs](http://192.168.99.100:8888/tree?token=tensorchiefs)(for some windows versions) in the browser. If you are asked for a password it's `tensorchiefs`
 
 ## Running with a linked file system.
-If you want to access a directory here (/Users/oli/Documents/workspace/dl_book/) from inside the docker container execute:
+For playing with the examples, we recommand cloning the github repository https://github.com/tensorchiefs/dl_book. Alternatively you can also download the zip-file. You then have to point the docker container to the directory. If this is say `~/Documents/workspace/dl_book/` you have to execute:
 
 ```
-docker run -p 8888:8888 -p 6006:6006 -v /Users/oli/Documents/workspace/dl_book/:/notebooks -it oduerr/dl_book_docker
+docker run -p 8888:8888 -p 6006:6006 -v ~/Documents/workspace/dl_book/:/notebooks -it oduerr/dl_book_docker
 ```
 
 ## Updating
