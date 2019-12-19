@@ -49,15 +49,3 @@ The entry before the colon ':' is on the local machine, the one after it inside 
   docker run -p 4242:8888 -it oduerr/dl_book_docker #4242 is the port on the local machine, 8888 inside the container
   docker run -v /tmp/dl_book/:/notebooks/dl_book/ #/tmp/dl_book is on local machine
 ```
-
-
-
-## Building the container 
-This repository is linked to dockerhub, however sometimes during debugging it might be faster to localy build the container. You can do this via 
-
-```
-docker build https://raw.githubusercontent.com/oduerr/dl_book_docker/master/Dockerfile
-```
-
-You can replace `master` with the branch you want to build.
-
