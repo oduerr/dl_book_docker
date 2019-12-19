@@ -33,5 +33,4 @@ WORKDIR "/notebooks"
 
 
 
-
 CMD ["/run_jupyter_2.sh"]
