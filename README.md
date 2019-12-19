@@ -5,7 +5,7 @@ This docker container is for the book:
 <img src="https://images.manning.com/720/960/resize/book/f/433a556-0816-4a6d-aa1a-6c199f368b1a/Durr-PDLP-MEAP-HI.png" width="20%">
 </a>
 
-With this docker container you should be able to run the code examples in https://github.com/tensorchiefs/dl_book
+This is the docker container for the code examples in https://github.com/tensorchiefs/dl_book
 
 ## Installation of docker
 
@@ -17,13 +17,13 @@ In the docker command line execute:
 ```{bash}
 docker run -p 8080:8888 -p 6006:6006 -it oduerr/dl_book_docker
 ```
-open [http://localhost:8888/?token=tensorchiefs](http://localhost:8888/?token=tensorchiefs) or [http://192.168.99.100:8888/tree?token=tensorchiefs](http://192.168.99.100:8888/tree?token=tensorchiefs)(for some windows versions) in the browser. 
+open [http://localhost:8888/?token=tensorchiefs](http://localhost:8888/?token=tensorchiefs) or [http://192.168.99.100:8888/tree?token=tensorchiefs](http://192.168.99.100:8888/tree?token=tensorchiefs)(for some windows versions) in the browser. If you are asked for a password it's `tensorchiefs`
 
 ## Running with a linked file system.
-If you want to access a directory here (/Users/oli/Documents/workspace/dl_tutorial/) from inside the docker container execute:
+If you want to access a directory here (/Users/oli/Documents/workspace/dl_book/) from inside the docker container execute:
 
 ```
-docker run -p 8888:8888 -p 6006:6006 -v /Users/oli/Documents/workspace/dl_tutorial/:/notebooks/local/ -it oduerr/dl_book_docker
+docker run -p 8888:8888 -p 6006:6006 -v /Users/oli/Documents/workspace/dl_book/:/notebooks -it oduerr/dl_book_docker
 ```
 
 ## Updating
@@ -47,7 +47,7 @@ The entry before the colon ':' is on the local machine, the one after it inside 
 
 ```
   docker run -p 4242:8888 -it oduerr/dl_book_docker #4242 is the port on the local machine, 8888 inside the container
-  docker run -v /tmp/dl_tutorial/:/notebooks/dl_tutorial/ #/tmp/dl_tutorial is on local machine
+  docker run -v /tmp/dl_book/:/notebooks/dl_book/ #/tmp/dl_book is on local machine
 ```
 
 
