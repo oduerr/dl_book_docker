@@ -26,8 +26,8 @@ EXPOSE 6006
 # IPython
 EXPOSE 8888
 
-COPY run_jupyter_2.sh /
-COPY run_jlab.sh /
+COPY ./run_jupyter_2.sh /
+COPY ./run_jlab.sh /
 #COPY notebooks /notebooks
 WORKDIR "/notebooks"
 
