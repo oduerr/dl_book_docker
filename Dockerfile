@@ -26,7 +26,7 @@ EXPOSE 6006
 # IPython
 EXPOSE 8888
 
-COPY notebooks /notebooks
+#COPY notebooks /notebooks
 WORKDIR "/notebooks"
 
 
